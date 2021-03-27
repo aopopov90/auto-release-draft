@@ -20,6 +20,8 @@ export async function createReleaseDraft(
     draft: true
   })
 
+  console.log(`Response is: ${response}`)
+
   if (response.status !== 201) {
     throw new Error(`Failed to create the release: ${response.status}`)
   }
